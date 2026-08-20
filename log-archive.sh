@@ -22,5 +22,10 @@ ARCHIVE_NAME="logs_archive_${TIMESTAMP}.tar.gz"
 tar -czf "$ARCHIVE_PATH" -C "$LOG_DIR" --exclude="archives" .
 ARCHIVE_PATH="${ARCHIVE_DIR}/${ARCHIVE_NAME}"
 
+LOG_FILE="${ARCHIVE_DIR}/archive.log"
+echo "$(date +"%Y-%m-%d %H:%M:%S") - Utworzono archiwum: $ARCHIVE_PATH" >> "$LOG_FILE"
+
+echo "Archiwum utworzone: "ARCHIVE_PATH"
+
 
 
