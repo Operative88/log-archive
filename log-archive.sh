@@ -25,7 +25,9 @@ ARCHIVE_PATH="${ARCHIVE_DIR}/${ARCHIVE_NAME}"
 LOG_FILE="${ARCHIVE_DIR}/archive.log"
 echo "$(date +"%Y-%m-%d %H:%M:%S") - Utworzono archiwum: $ARCHIVE_PATH" >> "$LOG_FILE"
 
-echo "Archiwum utworzone: "ARCHIVE_PATH"
+echo "Archiwum utworzone: $ARCHIVE_PATH"
+
+
 
 
 
