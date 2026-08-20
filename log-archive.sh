@@ -18,6 +18,8 @@ ARCHIVE_DIR="${LOG_DIR%/}/archives}"
 mkdir -p "$ARCHIVE_DIR"
 TIMESTAMP=$(date +"%y%m%d_%H%M%S")
 ARCHIVE_NAME="logs_archive_${TIMESTAMP}.tar.gz"
+
+tar -czf "$ARCHIVE_PATH" -C "$LOG_DIR" --exclude="archives" .
 ARCHIVE_PATH="${ARCHIVE_DIR}/${ARCHIVE_NAME}"
 
 
